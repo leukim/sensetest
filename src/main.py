@@ -10,6 +10,7 @@ if __name__ == '__main__':
     sense = SenseHat()
 
     sense.show_message("Hello world!")
+    print "HELLO WORLD"
 
     starttime = time.time()
     while True:
