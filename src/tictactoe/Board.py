@@ -45,8 +45,8 @@ class Board:
 
         array = []
         for row in _board:
-            for cell in row:
-                array.append(cell.as_array())
+            for elem in row:
+                array.append(elem)
         return array
 
     def __insert_selector(self, _board):
