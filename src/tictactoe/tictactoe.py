@@ -19,6 +19,7 @@ while True:
                     board.selector.move(event.direction)
 
         sense.set_pixels(board.to_pixel_array())
+        sleep(0.1)
         winner = board.state.get_winner()
         if winner is not None:
             sense.clear(winner)
