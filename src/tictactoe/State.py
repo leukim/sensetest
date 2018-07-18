@@ -17,10 +17,11 @@ class State:
     def get_cell(self, x, y):
         return self.state[x][y]
 
-    def set_cell(self, x, y, colour):
-        self.state[x][y] = colour
+    def select_cell(self, x, y):
+        self.state[x][y] = self.current_player
+        self.__switch_player()
 
-    def switch_player(self):
+    def __switch_player(self):
         if self.current_player == Colour.RED:
             self.current_player = Colour.BLUE
         else:

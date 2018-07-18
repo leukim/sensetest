@@ -33,8 +33,7 @@ class Board:
 
     def select_current_cell(self):
         if self.state.get_cell(self.selector.x, self.selector.y) == Colour.BLACK:
-            self.state.set_cell(self.selector.x, self.selector.y, self.state.current_player)
-            self.state.switch_player()
+            self.state.select_cell(self.selector.x, self.selector.y)
 
     def to_pixel_array(self):
         _board = deepcopy(self.board)
