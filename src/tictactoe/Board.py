@@ -59,5 +59,5 @@ class Board:
         for x in range(3):
             for y in range(3):
                 if self.state.get_cell(x, y) != Colour.BLACK:
-                    for cell in Board.GAME_CELL_TO_BOARD_PIXELS[self.selector.x][self.selector.y]:
+                    for cell in Board.GAME_CELL_TO_BOARD_PIXELS[x][y]:
                         _board[cell[0]][cell[1]] = self.state.get_cell(x, y)
